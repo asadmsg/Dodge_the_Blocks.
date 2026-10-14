@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodge the Blocks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Dodge the Blocks</h1>
+            <div class="stats">
+                <span>Score: <span id="score">0</span></span>
+                <span>High Score: <span id="highScore">0</span></span>
+                <span>Lives: <span id="lives">3</span></span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="400" height="500"></canvas>
+        <div class="controls">
+            <p>Use <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> to move</p>
+            <button id="startBtn" onclick="startGame()">Start Game</button>
+            <button id="restartBtn" onclick="restartGame()" style="display:none;">Restart</button>
+        </div>
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
